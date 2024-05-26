@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Create/Edit Event" icon-name="action:new_event">
+        <div class="slds-form slds-m-around_medium">
+            <lightning-input label="Event Name" value={event.name} onchange={handleChange} data-field="name"></lightning-input>
+            <lightning-input type="date" label="Event Date" value={event.date} onchange={handleChange} data-field="date"></lightning-input>
+            <lightning-input type="number" label="Target Amount" value={event.targetAmount} onchange={handleChange} data-field="targetAmount"></lightning-input>
+            <lightning-button variant="brand" label="Save Event" title="Save Event" onclick={handleSave}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,15 @@
+<template>
+    <!-- Main Layout: Organizes the whole page -->
+    <lightning-layout horizontal-align="stretch" class="slds-m-around_medium">
+
+        <!-- Navigation Menu: Placed in its own layout item for better control over spacing -->
+        <lightning-layout-item flexibility="auto" padding="around-small">
+            <c-app-menu></c-app-menu> <!-- Custom menu component -->
+       </lightning-layout-item>
+
+
+
+    <!-- Footer: Placed outside the main layout to span the entire width of the page -->
+    <c-app-footer></c-app-footer> <!-- Footer component -->
+    </lightning-layout>
+</template>

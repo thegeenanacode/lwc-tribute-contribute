@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Member Management" icon-name="standard:contact">
+        <div class="slds-p-horizontal_small slds-p-bottom_medium">
+            <lightning-button label="New Member" variant="brand" onclick={handleNewMember}></lightning-button>
+        </div>
+        <c-member-list onmemberselected={handleMemberSelected}></c-member-list>
+        <template if:true={isEditMode}>
+            <c-member-form member-id={selectedMemberId} onsave={handleSaveMember} oncancel={handleCancel}></c-member-form>
+        </template>
+    </lightning-card>
+</template>

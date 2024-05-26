@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Upcoming Events" icon-name="standard:event">
+        <ul class="slds-m-around_medium">
+            <template for:each={events} for:item="event">
+                <li key={event.id} class="slds-item">
+                    <div class="slds-grid slds-gutters slds-align-spread">
+                        <div class="slds-col">{event.name} - {event.date}</div>
+                        <div class="slds-col slds-text-align_right">
+                            <lightning-button label="Details" variant="brand" onclick={handleSelectEvent}></lightning-button>
+                        </div>
+                    </div>
+                </li>
+            </template>
+        </ul>
+        <template if:true={events.error}>
+            <p class="slds-p-horizontal_small slds-text-color_error">Error loading events: {events.error}</p>
+        </template>
+    </lightning-card>
+</template>
